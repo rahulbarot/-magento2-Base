@@ -1,0 +1,22 @@
+{
+    "name": "devawesome/module-base",
+    "description": "Magento 2 : DevAwesome base module",
+    "type": "magento2-module",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Rahul Barot",
+            "email": "business.magerahul@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "MageRahul\\Base\\": ""
+        }
+    }
+}
