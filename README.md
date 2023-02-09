@@ -1,51 +1,48 @@
-# Mage2 Module DevAwesome Base
+# DevAwesome Base for Magento 2
 
-    ``devawesome/module-base``
+[![Latest Stable Version](http://poser.pugx.org/devawesome/module-base/v)](https://packagist.org/packages/devawesome/module-base)
+[![Total Downloads](http://poser.pugx.org/devawesome/module-base/downloads)](https://packagist.org/packages/devawesome/module-base)
+[![License](http://poser.pugx.org/devawesome/module-base/license)](https://packagist.org/packages/devawesome/module-base)
 
- - [Main Functionalities](#markdown-header-main-functionalities)
- - [Installation](#markdown-header-installation)
- - [Configuration](#markdown-header-configuration)
- - [Specifications](#markdown-header-specifications)
- - [Attributes](#markdown-header-attributes)
+## How to install & upgrade DevAwesome_Base
 
+### 1. Install via composer (recommend)
 
-## Main Functionalities
-Magento 2 : DevAwesome base module for all the modules
+We recommend you to install DevAwesome_Base module via composer. It is easy to install, update and maintaince.
 
-## Installation
-\* = in production please use the `--keep-generated` option
+Run the following command in Magento 2 root folder.
 
-### Type 1: Zip file
+#### 1.1 Install
 
- - Unzip the zip file in `app/code/DevAwesome`
- - Enable the module by running `php bin/magento module:enable DevAwesome_Base`
- - Apply database updates by running `php bin/magento setup:upgrade`\*
- - Flush the cache by running `php bin/magento cache:flush`
+```
+composer require devawesome/module-base
+php bin/magento setup:upgrade
+php bin/magento setup:static-content:deploy
+```
 
-### Type 2: Composer
+#### 1.2 Upgrade
 
- - Make the module available in a composer repository for example:
-    - private repository `repo.magento.com`
-    - public repository `packagist.org`
-    - public github repository as vcs
- - Add the composer repository to the configuration by running `composer config repositories.repo.magento.com composer https://repo.magento.com/`
- - Install the module composer by running `composer require devawesome/module-base`
- - enable the module by running `php bin/magento module:enable DevAwesome_Base`
- - apply database updates by running `php bin/magento setup:upgrade`\*
- - Flush the cache by running `php bin/magento cache:flush`
+```
+composer update devawesome/module-base
+php bin/magento setup:upgrade
+php bin/magento setup:static-content:deploy
+```
 
+Run compile if your store in Product mode:
 
-## Configuration
+```
+php bin/magento setup:di:compile
+```
 
+### 2. Copy and paste
 
+If you don't want to install via composer, you can use this way.
 
+- Download [the latest version here](https://github.com/rahulbarot/magento2-Base/archive/refs/heads/master.zip)
+- Extract `master.zip` file to `app/code/DevAwesome/Base` ; You should create a folder path `app/code/DevAwesome/Base` if not exist.
+- Go to Magento root folder and run upgrade command line to install `DevAwesome_Base`:
 
-## Specifications
-
-
-
-
-## Attributes
-
-
-
+```
+php bin/magento setup:upgrade
+php bin/magento setup:static-content:deploy
+```
